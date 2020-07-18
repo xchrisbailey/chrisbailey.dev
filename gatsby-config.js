@@ -18,6 +18,18 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          { resolve: `gatsby-remark-images`, options: { maxWidth: 590 } },
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: `SynthWave '84`,
+              extensions: ['synthwave-vscode'],
+            },
+          },
+          { resolve: `gatsby-remark-external-links` },
+          { resolve: `gatsby-remark-smartypants` },
+        ],
       },
     },
     `gatsby-transformer-sharp`,

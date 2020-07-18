@@ -2,10 +2,12 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { Box, Text } from '@chakra-ui/core'
 
+import Layout from '../components/Layout'
+
 const index = ({ data }) => {
   const posts = data.allMdx.edges
   return (
-    <Box p={3} w="600px" mx="auto">
+    <Layout>
       {posts.map(post => (
         <Box key={post.node.id}>
           <Text fontSize="xl">
@@ -17,7 +19,7 @@ const index = ({ data }) => {
           <Text>{post.node.excerpt}</Text>
         </Box>
       ))}
-    </Box>
+    </Layout>
   )
 }
 
