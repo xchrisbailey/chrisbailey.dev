@@ -33,6 +33,13 @@ const ListingBox = styled.article`
 `
 
 const Title = styled.h3`
+  padding: 4px;
+  color: ${({ theme }) => theme.text};
+  box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.heading};
+  transition: 250ms;
+  &:hover {
+    box-shadow: inset 0 -1.25em 0 ${({ theme }) => theme.heading};
+  }
   text-decoration: none;
   margin: 0;
   a {
@@ -41,8 +48,6 @@ const Title = styled.h3`
     padding: 4px;
     &:hover {
       text-decoration: none;
-      color: ${({ theme }) => theme.body};
-      background-color: ${({ theme }) => theme.heading};
     }
   }
 `
