@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import media from 'styled-media-query'
 
 const PostListing = ({ post }) => {
   return (
@@ -54,6 +55,9 @@ const Title = styled.h3`
 
 const InfoBar = styled.div`
   display: flex;
+  ${media.lessThan('medium')`
+  justify-content: space-between;
+  `}
   margin-bottom: 5px;
   p {
     font-size: 16px;

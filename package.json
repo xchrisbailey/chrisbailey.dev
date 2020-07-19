@@ -36,6 +36,7 @@
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.1",
+    "styled-media-query": "^2.1.2",
     "synthwave-vscode": "robb0wen/synthwave-vscode",
     "typography": "^0.16.19",
     "typography-theme-ocean-beach": "^0.16.19",

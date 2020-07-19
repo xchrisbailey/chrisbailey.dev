@@ -30,6 +30,7 @@ const DarkModeSwitch = ({ setTheme, theme }) => {
 }
 
 const SwitchContainer = styled.div`
+  transform: scale(0.75);
   margin: 0;
 `
 const Switch = styled.label`

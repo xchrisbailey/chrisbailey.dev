@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 import useLocalStorage from '../utils/hooks'
 import { lightTheme, darkTheme } from '../utils/theme'
-import DarkModeSwitch from './DarkModeSwitch'
 import Header from './Header'
 
 const Layout = ({ children }) => {
