@@ -5,6 +5,7 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import useLocalStorage from '../utils/hooks'
 import { lightTheme, darkTheme } from '../utils/theme'
 import DarkModeSwitch from './DarkModeSwitch'
+import Header from './Header'
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = useLocalStorage('light')
@@ -12,8 +13,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <Container>
         <GlobalStyles />
-        <DarkModeSwitch theme={theme} setTheme={setTheme} />
-        <Link to="/">chris bailey (dev)</Link>
+        <Header theme={theme} setTheme={setTheme} />
         {children}
       </Container>
     </ThemeProvider>
@@ -36,8 +36,13 @@ body {
   color: ${({ theme }) => theme.text};
 }
 
-h1,h2,h3 {
-  color: ${({ theme }) => theme.heading};
+h1,h2,h3,h4 {
+  color: ${({ theme }) => theme.text};
+  font-weight: bold;
+}
+
+h1 {
+  box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.heading};
 }
 
 code {

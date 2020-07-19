@@ -9,13 +9,15 @@ const Post = ({ data: { mdx } }) => {
   return (
     <Layout>
       <SEO title={mdx.frontmatter.title} />
-      <h1>{mdx.frontmatter.title}</h1>
+      <article>
+        <h1>{mdx.frontmatter.title}</h1>
 
-      <p>
-        🗓 posted {mdx.frontmatter.date} | ☕️ {mdx.timeToRead} minutes to read
-      </p>
+        <p>
+          🗓 posted {mdx.frontmatter.date} | ☕️ {mdx.timeToRead} minutes to read
+        </p>
 
-      <MDXRenderer>{mdx.body}</MDXRenderer>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </article>
     </Layout>
   )
 }

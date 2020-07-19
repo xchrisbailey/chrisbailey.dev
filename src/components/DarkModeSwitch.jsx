@@ -30,9 +30,7 @@ const DarkModeSwitch = ({ setTheme, theme }) => {
 }
 
 const SwitchContainer = styled.div`
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  margin: 0;
 `
 const Switch = styled.label`
   display: flex;

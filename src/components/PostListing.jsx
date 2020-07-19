@@ -29,7 +29,7 @@ const PostListing = ({ post }) => {
 
 const ListingBox = styled.article`
   padding: 2px;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 `
 
 const Title = styled.h3`
