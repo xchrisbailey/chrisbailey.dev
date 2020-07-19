@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { Box, Text } from '@chakra-ui/core'
 
 import Layout from '../components/Layout'
 
@@ -9,15 +8,15 @@ const index = ({ data }) => {
   return (
     <Layout>
       {posts.map(post => (
-        <Box key={post.node.id}>
-          <Text fontSize="xl">
+        <div key={post.node.id}>
+          <h1>
             <Link to={post.node.slug}>{post.node.frontmatter.title}</Link>
-          </Text>
-          <Text>
+          </h1>
+          <h3>
             {post.node.frontmatter.date} | {post.node.timeToRead}min read
-          </Text>
-          <Text>{post.node.excerpt}</Text>
-        </Box>
+          </h3>
+          <p>{post.node.excerpt}</p>
+        </div>
       ))}
     </Layout>
   )
