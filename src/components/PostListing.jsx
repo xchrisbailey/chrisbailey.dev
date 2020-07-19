@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link as GatsbyLink } from 'gatsby'
+import { Link } from 'gatsby'
 
 const PostListing = ({ post }) => {
   return (
     <ListingBox>
-      <Link to={post.slug}>{post.frontmatter.title}</Link>
+      <Title>
+        <Link to={post.slug}>{post.frontmatter.title}</Link>
+      </Title>
       <InfoBar>
         <p>
           <span role="img" aria-label="calendar">
@@ -37,6 +39,13 @@ const Title = styled.h1`
   font-size: 26px;
   text-decoration: none;
   margin: 0;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 `
 
 const InfoBar = styled.div`
@@ -54,19 +63,6 @@ const Excerpt = styled.div`
   margin-bottom: 5px;
   p {
     margin: 0;
-  }
-`
-
-const Link = styled(GatsbyLink)`
-  color: var(--color-purple-dark);
-  font-size: 26px;
-  text-decoration: none;
-  margin: 0;
-  cursor: pointer;
-  font-weight: bold;
-  &:hover {
-    text-decoration: none;
-    color: var(--color-purple-light);
   }
 `
 
