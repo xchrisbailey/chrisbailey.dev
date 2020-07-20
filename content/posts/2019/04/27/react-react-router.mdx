@@ -1,13 +1,15 @@
----
-slug: "react-react-router"
-title: "React: React Router"
-date: "2019-04-27T20:55:57.915Z"
+js•---
+slug: 'react-react-router'
+title: 'React: React Router'
+date: '2019-04-27T20:55:57.915Z'
 published: true
-author: "Chris Bailey"
+author: 'Chris Bailey'
 tags:
-  - "javascript"
-  - "react"
-  - "webdev"
+
+- 'javascript'
+- 'react'
+- 'webdev'
+
 ---
 
 ### What is React Router?
@@ -58,11 +60,11 @@ So obviously dumping all of this into our App.js file would work, but things cou
 We're going to move most of our route logic into a file named AppRouter.js in a router folder.
 
 ```jsx
-import React from "react"
-import { Router, Route, Switch } from "react-router-dom"
+import React from 'react'
+import { Router, Route, Switch } from 'react-router-dom'
 
-import AboutPage from "../components/AboutPage.js"
-import HelpPage from "../components/HelpPage.js"
+import AboutPage from '../components/AboutPage.js'
+import HelpPage from '../components/HelpPage.js'
 
 const AppRouter = () => (
   <div>
@@ -76,7 +78,7 @@ const AppRouter = () => (
 export { AppRouter as default }
 ```
 
-Here we've added a little something different than in our first example. The `<Switch>` tags which will dig through the routes and find the matching one without rendering any additional routes. Now we've created a single file that contains all of our routes and can be imported into any our components and used directly like so.
+Here we've added a little something different than in our first example. The `js•<Switch>` tags which will dig through the routes and find the matching one without rendering any additional routes. Now we've created a single file that contains all of our routes and can be imported into any our components and used directly like so.
 
 ```jsx
 ...
@@ -97,7 +99,7 @@ We now have the ability to hit the created routes with the Link component from r
 
 ### Extra useful bits
 
-`<Redirect />` exist to help us add more use cases to our routes. Like checking if someone has permission to view a route, and redirecting elsewhere if they are not authorized. Usage would look something like this:
+`js•<Redirect />` exist to help us add more use cases to our routes. Like checking if someone has permission to view a route, and redirecting elsewhere if they are not authorized. Usage would look something like this:
 
 ```jsx
 import {Route, Redirect} form 'react-router-dom';
@@ -112,10 +114,10 @@ import {Route, Redirect} form 'react-router-dom';
 
 This calls the isLoggedIn function we've defined elsewhere, and if returns true sends us to the edit user component, else we are redirected back to the root path.
 
-`<NavLink>` keeps all the functionality of the `<Link>` component, but adds the ability to specify a CSS class to add when the current route matches the route on given in the tag:
+`js•<NavLink>` keeps all the functionality of the `js•<Link>` component, but adds the ability to specify a CSS class to add when the current route matches the route on given in the tag:
 
 ```jsx
-import { NavLink } from "react-router-dom"
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => (
   <NavLink to="/" activeClassName="active">

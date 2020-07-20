@@ -21,7 +21,8 @@ const PostListing = ({ post }) => {
           <span role="img" aria-label="coffee">
             ☕️
           </span>{' '}
-          {post.timeToRead}min/s to read
+          {post.timeToRead}
+          {post.timeToRead > 1 ? ' minutes' : ' minute'} to read
         </p>
       </InfoBar>
     </ListingBox>
@@ -48,6 +49,7 @@ const Title = styled.h3`
     text-decoration: none;
     padding: 4px;
     &:hover {
+      color: inherit;
       text-decoration: none;
     }
   }

@@ -25,8 +25,8 @@ const Container = styled.div`
 
 const GlobalStyles = createGlobalStyle`
 :root {
-  --color-purple-dark: rgb(197, 153, 255);
-  --color-purple-light: rgb(216, 187, 255);
+  --color-pink-dark: #E972AF;
+  --color-pink-light: #EE92C2;
 }
 
 body {
@@ -44,18 +44,18 @@ h1 {
 }
 
 code {
-  background-color: #262335;
+  /* background-color: #262335; */
   padding: 3px;
   border-radius: 4px;
-  color: #36F9F6;
+  /* color: #36F9F6; */
 }
 
 a {
   text-decoration: none;
-  color: var(--color-purple-dark);
+  color: var(--color-pink-dark);
+  text-decoration: underline;
   &:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--color-purple-light);
+    color: var(--color-pink-light);
   }
 }
 

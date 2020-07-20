@@ -2,7 +2,7 @@
 slug: 'java:-inheritance-polymorphism-and-abstracts'
 title: 'Java: Inheritance, Polymorphism and Abstracts'
 date: '2020-05-27T19:25:49.223Z'
-published: false
+published: true
 excerpt: 'quick run down of polymorphism, inheritance and abstract classes and methods in Java.'
 author: 'Chris Bailey'
 tags:
@@ -13,21 +13,19 @@ tags:
 
 ### 👨‍👩‍👦 Inheritance
 
-In Java inheritance is the relationship between classes that allow the passing of data and functionality between them. Java only deals in single inheritances, meaning you can only inherit from one other class. However, you can have multiple interfaces. There are numerous terms for these relationships, the ones you'll hear most in Java is superclass and subclass. Every object in Java is derived from the parent Object class, and any class can be a superclass. By using the keyword `final`  in the definition you can prevent a class from being a superclass. All fields and methods of the superclass are inherited unless marked `private`, we can use getters and setters to expose private fields or methods. Using the `@Override` annotation helps with readability and improves the compilers ability to catch errors.
-
-
+In Java inheritance is the relationship between classes that allow the passing of data and functionality between them. Java only deals in single inheritances, meaning you can only inherit from one other class. However, you can have multiple interfaces. There are numerous terms for these relationships, the ones you'll hear most in Java is superclass and subclass. Every object in Java is derived from the parent Object class, and any class can be a superclass. By using the keyword `java•final` in the definition you can prevent a class from being a superclass. All fields and methods of the superclass are inherited unless marked `java•private`, we can use getters and setters to expose private fields or methods. Using the `java•@Override` annotation helps with readability and improves the compilers ability to catch errors.
 
 ```java
 // create Item class
 public class Item {
     // directly inaccessible to subclasses
     private string type;
-    
+
     // getter - exposes type for viewing
     public String getType() {
         return type;
     }
-    
+
     // setter - exposes type for setting
     public void setType(String type) {
         this.type = type;
@@ -35,8 +33,8 @@ public class Item {
 }
 
 // create DogFood class that extends Item.  superclass = Item, subclass = DogFood
-public class DogFood extends Item { 
-    
+public class DogFood extends Item {
+
     // Overriding superclass getType method to return "Dog food"
     @Override
     public String getType() {
@@ -47,7 +45,7 @@ public class DogFood extends Item {
 
 ### 👴 Polymorphism
 
-Polymorphism allows subclasses to be both themselves and the superclass they are inheriting from. They will have the ability to call available methods from the superclass, subclass methods are given access to arguments via `super()`, and can pass instances of subtypes.
+Polymorphism allows subclasses to be both themselves and the superclass they are inheriting from. They will have the ability to call available methods from the superclass, subclass methods are given access to arguments via `java•super()`, and can pass instances of subtypes.
 
 ```java
 // create class Item (our super class)
@@ -94,7 +92,7 @@ public class DogFood extends Item {
 Abstract classes can not be instantiated, this be done through subclasses. Similarly, Abstract methods have no implementation, are described only by their signature, and must be implemented through the subclass.
 
 ```java
-// class delcared w/ abstract keyword.  
+// class delcared w/ abstract keyword.
 // Item item = new Item("hi", "hi") - will no longer work
 public abstract class Item {
     private String name;

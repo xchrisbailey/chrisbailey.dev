@@ -1,15 +1,15 @@
 ---
-slug: "next-js-9-getting-started"
-title: "Next.js 9: Getting Started"
-date: "2019-09-28T04:34:32.277Z"
-published: false
-author: "Chris Bailey"
+slug: 'next-js-9-getting-started'
+title: 'Next.js 9: Getting Started'
+date: '2019-09-28T04:34:32.277Z'
+published: true
+author: 'Chris Bailey'
 tags:
-  - "react"
-  - "webdev"
-  - "javascript"
-  - "node"
-  - "nextjs"
+  - 'react'
+  - 'webdev'
+  - 'javascript'
+  - 'node'
+  - 'nextjs'
 ---
 
 ### What is, and Why use Next.js
@@ -24,10 +24,10 @@ straight to Gatsby, but for more dynamic apps I feel next would be one of the be
 
 ### How do we get started?
 
-Bootstrapping your next project is as easy as running `yarn create next-app hello-world`. this gives
+Bootstrapping your next project is as easy as running `bash•yarn create next-app hello-world`. this gives
 us a simple starting structure for our project, much like create-react-app would.
 
-Now lets `cd` into our new drive and take a peek around!
+Now lets `bash•cd` into our new drive and take a peek around!
 
 ```bash
 ➜ cd hello-world && ls
@@ -113,12 +113,12 @@ $ next start
 **components/nav.js**:
 
 ```jsx
-import React from "react"
-import Link from "next/link"
+import React from 'react'
+import Link from 'next/link'
 
 const links = [
-  { href: "https://zeit.co/now", label: "ZEIT" },
-  { href: "https://github.com/zeit/next.js", label: "GitHub" },
+  { href: 'https://zeit.co/now', label: 'ZEIT' },
+  { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -146,7 +146,7 @@ const Nav = () => (
 export default Nav
 ```
 
-A simple navbar with a few new things from basic react, one being `next/link`, for now, we'll just note this and come back later and talk about specific things next gives us to make life a bit easier.
+A simple navbar with a few new things from basic react, one being `js•next/link`, for now, we'll just note this and come back later and talk about specific things next gives us to make life a bit easier.
 
 **static/**:
 
@@ -160,9 +160,9 @@ This one is simple enough, it's a folder for static assets and from start only c
 **pages/index.js**:
 
 ```jsx
-import React from "react"
-import Head from "next/head"
-import Nav from "../components/nav"
+import React from 'react'
+import Head from 'next/head'
+import Nav from '../components/nav'
 
 const Home = () => (
   <div>
@@ -205,9 +205,9 @@ const Home = () => (
 export default Home
 ```
 
-First lets note the location `pages/index.js` this is a special directory in Next.js that creates a route for any file (valid components) places inside of it. So in case of the boilerplate, it's created the index route for our application.
+First lets note the location `js•pages/index.js` this is a special directory in Next.js that creates a route for any file (valid components) places inside of it. So in case of the boilerplate, it's created the index route for our application.
 
-Inside the file things should look pretty similar, it just a standard react component exported as `default`. It's using the special `next/head` feature to set the page header with the favicon from previously mentioned static directory and set the page title.
+Inside the file things should look pretty similar, it just a standard react component exported as `js•default`. It's using the special `js•next/head` feature to set the page header with the favicon from previously mentioned static directory and set the page title.
 
 And like that, we have a ready to go next project structure to start adding to and creating our fantastic web apps! Which is as simple as adding new files into the pages directory with our desired pages built around react components!
 

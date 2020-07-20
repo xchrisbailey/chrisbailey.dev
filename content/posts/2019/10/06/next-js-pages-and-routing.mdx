@@ -2,7 +2,7 @@
 slug: 'next-js-pages-and-routing'
 title: 'Next.js: Pages and Routing'
 date: '2019-10-06T15:29:10.415Z'
-published: false
+published: true
 author: 'Chris Bailey'
 tags:
   - 'nodejs'
@@ -26,7 +26,7 @@ drwxr-xr-x    - chris 28 Sep 23:38 static
 .rw-r--r-- 238k chris 28 Sep 23:38 yarn.lock
 ```
 
-The relevant part of this for creating pages is... The pages directory. In Next if we add a component into the pages directory that has a default export it will automatically create a route for that in our project. Lets go ahead and create our first new page in the project. We'll start with an about page, so we will create `pages/about.js` and add in the following code:
+The relevant part of this for creating pages is... The pages directory. In Next if we add a component into the pages directory that has a default export it will automatically create a route for that in our project. Lets go ahead and create our first new page in the project. We'll start with an about page, so we will create `js•pages/about.js` and add in the following code:
 
 ```jsx
 import React from 'react'
@@ -47,6 +47,6 @@ const About = () => (
 export default About
 ```
 
-Easy right? We created a pretty standard functional component that returned JSX as we would in any React component, and now when we run `yarn dev` and goto `localhost:3000/about` we can see the component we just created has its own route and page. Next has a bit of magic in this area as all we're doing is dropping in components and pages are being automatically created and redered for us on the server side.
+Easy right? We created a pretty standard functional component that returned JSX as we would in any React component, and now when we run `js•yarn dev` and goto `js•localhost:3000/about` we can see the component we just created has its own route and page. Next has a bit of magic in this area as all we're doing is dropping in components and pages are being automatically created and redered for us on the server side.
 
 ### Moving Around Next.js Pages

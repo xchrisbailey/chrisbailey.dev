@@ -35,7 +35,9 @@ const Brand = styled(Link)`
   font-weight: bold;
   letter-spacing: 0.08em;
   color: ${({ theme }) => theme.text};
+  text-decoration: none;
   &:hover {
+    color: ${({ theme }) => theme.text};
     text-decoration: none;
   }
 `
@@ -57,6 +59,7 @@ const NavLink = styled(Link)`
   transition: 250ms;
   text-transform: uppercase;
   &:hover {
+    color: inherit;
     box-shadow: inset 0 -1.25em 0 ${({ theme }) => theme.heading};
     text-decoration: none;
   }
