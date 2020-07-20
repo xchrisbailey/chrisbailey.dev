@@ -16,7 +16,7 @@ const PostListing = ({ post }) => {
           </span>{' '}
           {post.frontmatter.date}
         </p>
-        <p> | </p>
+        <p> • </p>
         <p>
           <span role="img" aria-label="coffee">
             ☕️

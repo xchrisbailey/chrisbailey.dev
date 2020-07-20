@@ -1,23 +1,30 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
 import DarkModeSwitch from './DarkModeSwitch'
 
 const Header = ({ theme, setTheme }) => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
-    <>
-      <HeaderBox>
-        <Brand to="/">chris bailey (dev)</Brand>
-        <NavBox>
-          <NavLink to="/">About</NavLink>
-          <NavLink to="/">Works</NavLink>
-          <NavLink to="/">Contact</NavLink>
-        </NavBox>
-        <DarkModeSwitch theme={theme} setTheme={setTheme} />
-      </HeaderBox>
-    </>
+    <HeaderBox>
+      <Brand to="/">{data.site.siteMetadata.title}</Brand>
+      <NavBox>
+        <NavLink to="/">About</NavLink>
+        <NavLink to="/">Works</NavLink>
+        <NavLink to="/">Contact</NavLink>
+      </NavBox>
+      <DarkModeSwitch theme={theme} setTheme={setTheme} />
+    </HeaderBox>
   )
 }
 

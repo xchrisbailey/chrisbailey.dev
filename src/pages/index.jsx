@@ -1,13 +1,15 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import PostListing from '../components/PostListing'
+import SEO from '../components/seo'
 
 const index = ({ data }) => {
   const posts = data.allMdx.edges
   return (
     <Layout>
+      <SEO title="launchpad" />
       {posts.map(post => (
         <PostListing key={post.node.id} post={post.node} />
       ))}
@@ -17,6 +19,11 @@ const index = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {

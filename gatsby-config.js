@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Chris Bailey (dot) Dev`,
+    title: `chris bailey (dev)`,
     description: `Personal developer blog, follow along with my learning journey`,
     author: `@chrisbailey`,
+    siteUrl: 'https://chrisbailey.dev',
   },
   plugins: [
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
