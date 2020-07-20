@@ -35,6 +35,7 @@ const ListingBox = styled.article`
 `
 
 const Title = styled.h3`
+  display: inline-block;
   padding: 4px;
   color: ${({ theme }) => theme.text};
   box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.heading};
