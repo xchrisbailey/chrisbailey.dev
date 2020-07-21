@@ -23,6 +23,8 @@ const work = ({ data }) => {
             shot={work.node.frontmatter.image}
             date={work.node.frontmatter.date}
             tech={work.node.frontmatter.tech}
+            repo={work.node.frontmatter.repo}
+            live={work.node.frontmatter.live}
           />
         ))}
       </Grid>
@@ -42,6 +44,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             description
             tech
+            repo
+            live
             image {
               childImageSharp {
                 fluid {
