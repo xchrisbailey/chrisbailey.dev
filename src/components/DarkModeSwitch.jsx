@@ -15,12 +15,12 @@ const DarkModeSwitch = ({ setTheme, theme }) => {
         />
         <div className="slider round" />
         <div className="toggle-moon">
-          <span role="img" aria-label="moon emoji">
+          <span role="img" aria-label="moon">
             🌙
           </span>
         </div>
         <div className="toggle-sun">
-          <span role="img" aria-label="sun emoji">
+          <span role="img" aria-label="sun">
             ☀️
           </span>
         </div>

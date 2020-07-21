@@ -6,7 +6,7 @@ import { lightTheme, darkTheme } from '../utils/theme'
 import Header from './Header'
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = useLocalStorage('light')
+  const [theme, setTheme] = useLocalStorage('mode', 'light')
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <Container>
@@ -44,10 +44,10 @@ h1 {
 }
 
 code {
-  /* background-color: #262335; */
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  overflow-x: scroll;
   padding: 3px;
   border-radius: 4px;
-  /* color: #36F9F6; */
 }
 
 a {

@@ -19,9 +19,9 @@ const Header = ({ theme, setTheme }) => {
     <HeaderBox>
       <Brand to="/">{data.site.siteMetadata.title}</Brand>
       <NavBox>
-        <NavLink to="/">About</NavLink>
-        <NavLink to="/">Works</NavLink>
-        <NavLink to="/">Contact</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/work">Works</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </NavBox>
       <DarkModeSwitch theme={theme} setTheme={setTheme} />
     </HeaderBox>

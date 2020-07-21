@@ -17,6 +17,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `works`,
+        path: `${__dirname}/content/works`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
@@ -45,6 +52,10 @@ module.exports = {
           { resolve: `gatsby-remark-external-links` },
           { resolve: `gatsby-remark-smartypants` },
         ],
+        defaultLayouts: {
+          posts: require.resolve('./src/templates/post.jsx'),
+          default: require.resolve('./src/components/Layout.jsx'),
+        },
       },
     },
     `gatsby-transformer-sharp`,
