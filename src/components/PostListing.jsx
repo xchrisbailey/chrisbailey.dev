@@ -35,6 +35,7 @@ const ListingBox = styled.article`
 `
 
 const Title = styled.h3`
+  line-height: 1.1em;
   display: inline-block;
   padding: 4px;
   color: ${({ theme }) => theme.text};

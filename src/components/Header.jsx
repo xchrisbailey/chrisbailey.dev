@@ -37,7 +37,7 @@ const HeaderBox = styled.header`
 `
 
 const Brand = styled(Link)`
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Bree Serif', serif;
   font-size: 1.25em;
   font-weight: bold;
   letter-spacing: 0.08em;

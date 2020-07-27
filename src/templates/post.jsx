@@ -42,6 +42,9 @@ const Title = styled.h1`
 const Info = styled.div`
   display: flex;
   justify-content: space-evenly;
+  p {
+    margin: 0;
+  }
 `
 
 export const pageQuery = graphql`
