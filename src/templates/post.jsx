@@ -19,7 +19,7 @@ const Post = ({ data: { mdx } }) => {
 }
 
 const Title = styled.h1`
-  margin-bottom: 5px;
+  margin-bottom: 1.25em;
 `
 
 export const pageQuery = graphql`

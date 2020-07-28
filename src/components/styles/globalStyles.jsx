@@ -79,6 +79,7 @@ blockquote {
   margin-left: 0;
   border-left: 0.75em solid ${({ theme }) => theme.body.secondary};
   padding-left: 1em;
+  font-style: italic;
 }
 `
 
