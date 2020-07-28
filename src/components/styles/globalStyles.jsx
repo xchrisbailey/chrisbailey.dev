@@ -56,7 +56,7 @@ li {
 }
 
 code, pre, kbd {
-  font-size: 16px;
+  font-size: .9em;
   font-family: "Fira Code", monospace;
 }
 
