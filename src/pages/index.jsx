@@ -35,7 +35,6 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
           }
-          excerpt(pruneLength: 160)
           timeToRead
           slug
         }
