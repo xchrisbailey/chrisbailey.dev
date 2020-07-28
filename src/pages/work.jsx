@@ -14,20 +14,8 @@ const work = ({ data }) => {
         listing of the things I&apos;ve created, the stack they use/d and a
         little info about the project itself.
       </p>
-      <Grid columns={2}>
-        {works.map(work => (
-          <WorkCard
-            key={work.node.id}
-            title={work.node.frontmatter.title}
-            description={work.node.frontmatter.description}
-            shot={work.node.frontmatter.image}
-            date={work.node.frontmatter.date}
-            tech={work.node.frontmatter.tech}
-            repo={work.node.frontmatter.repo}
-            live={work.node.frontmatter.live}
-          />
-        ))}
-      </Grid>
+
+      <p>coming...</p>
     </Layout>
   )
 }
