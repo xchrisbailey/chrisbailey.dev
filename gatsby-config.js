@@ -49,8 +49,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: `SynthWave '84`,
-              extensions: ['synthwave-vscode'],
+              // theme: `SynthWave '84`,
+              theme: 'Night Owl',
+              extensions: ['synthwave-vscode', 'night-owl'],
+              injectStyles: true,
               inlineCode: {
                 marker: '•',
               },
