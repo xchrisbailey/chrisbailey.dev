@@ -12,23 +12,6 @@ const Post = ({ data: { mdx } }) => {
       <SEO title={mdx.frontmatter.title} />
       <article>
         <Title>{mdx.frontmatter.title}</Title>
-
-        <Info>
-          <p>
-            <span role="img" aria-label="calendar">
-              🗓
-            </span>{' '}
-            posted {mdx.frontmatter.date}
-          </p>{' '}
-          <p>• </p>
-          <p>
-            {mdx.timeToRead} minutes to read{' '}
-            <span role="img" aria-label="coffee">
-              ☕️
-            </span>
-          </p>
-        </Info>
-
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </article>
     </Layout>
@@ -37,14 +20,6 @@ const Post = ({ data: { mdx } }) => {
 
 const Title = styled.h1`
   margin-bottom: 5px;
-`
-
-const Info = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  p {
-    margin: 0;
-  }
 `
 
 export const pageQuery = graphql`
