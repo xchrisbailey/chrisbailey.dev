@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-typescript": "^7.10.5",
+    "chalk": "^4.1.0",
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -45,7 +46,10 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.4",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "prettier": "^2.0.5"
+    "inquirer": "^7.3.3",
+    "json-to-pretty-yaml": "^1.2.2",
+    "prettier": "^2.0.5",
+    "slugify": "^1.4.5"
   },
   "keywords": [
     "gatsby"
@@ -58,7 +62,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "newpost": "node ./scripts/newpost.js"
   },
   "repository": {
     "type": "git",
