@@ -1,14 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
-:root {
-  --color-purple-dark: #B47AEA;
-  --color-purple-light: #BD93D8;
-}
-
 body {
-  background: ${({ theme }) => theme.body};
-  color: ${({ theme }) => theme.text};
+  background: ${({ theme }) => theme.body.primary};
+  color: ${({ theme }) => theme.color.text};
   font-size: 18px;
   font-family: "Noto Sans", sans-serif;
 }
@@ -18,13 +13,13 @@ p {
 }
 
 h1,h2,h3,h4 {
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.color.text};
   font-weight: bold;
   font-family: "Bree Serif", serif;
 }
 
 h1 {
-  box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.heading};
+  box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.color.primary};
   font-size: 2em;
   margin-bottom: 1.7em;
 }
@@ -73,16 +68,16 @@ code {
 
 a {
   text-decoration: none;
-  color: var(--color-purple-dark);
+  color: ${({ theme }) => theme.color.primary};
   text-decoration: underline;
   &:hover {
-    color: var(--color-purple-light);
+    color: ${({ theme }) => theme.color.secondary};
   }
 }
 
 blockquote {
   margin-left: 0;
-  border-left: 0.75em solid ${({ theme }) => theme.heading};
+  border-left: 0.75em solid ${({ theme }) => theme.body.secondary};
   padding-left: 1em;
 }
 `

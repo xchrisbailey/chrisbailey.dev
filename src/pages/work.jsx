@@ -2,11 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Grid from '../components/Grid'
-import WorkCard from '../components/WorkCard'
 
 const work = ({ data }) => {
-  const works = data.allMdx.edges
+  // const works = data.allMdx.edges
   return (
     <Layout>
       <h1>Things I&apos;ve Created</h1>

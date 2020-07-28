@@ -38,11 +38,11 @@ const Title = styled.h3`
   line-height: 1.1em;
   display: inline-block;
   padding: 4px;
-  color: ${({ theme }) => theme.text};
-  box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.heading};
+  color: ${({ theme }) => theme.color.text};
+  box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.color.primary};
   transition: 250ms;
   &:hover {
-    box-shadow: inset 0 -1.25em 0 ${({ theme }) => theme.heading};
+    box-shadow: inset 0 -1.25em 0 ${({ theme }) => theme.color.primary};
   }
   text-decoration: none;
   margin: 0;

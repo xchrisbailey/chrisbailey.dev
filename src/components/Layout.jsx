@@ -1,9 +1,10 @@
 import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
 import useLocalStorage from '../utils/hooks'
 import { lightTheme, darkTheme } from '../utils/theme'
 import Header from './Header'
+import Container from './styles/Container'
 import GlobalStyles from './styles/globalStyles'
 
 const Layout = ({ children }) => {
@@ -18,11 +19,5 @@ const Layout = ({ children }) => {
     </ThemeProvider>
   )
 }
-
-const Container = styled.div`
-  max-width: 650px;
-  padding: 1em;
-  margin: 2em auto;
-`
 
 export default Layout

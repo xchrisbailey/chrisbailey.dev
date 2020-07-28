@@ -45,7 +45,12 @@ module.exports = {
               maxWidth: 590,
             },
           },
-          { resolve: `gatsby-remark-images`, options: { maxWidth: 590 } },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
           {
             resolve: `gatsby-remark-vscode`,
             options: {

@@ -47,7 +47,7 @@ const CardContainer = styled.article`
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  background: ${({ theme }) => theme.heading};
+  background: ${({ theme }) => theme.primary};
   padding: 10px 5px;
   margin: 4px 4px 0 4px;
   border-top-left-radius: 5px;

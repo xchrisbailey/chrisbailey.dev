@@ -1,12 +1,22 @@
 export const lightTheme = {
-  body: '#FDFDFC',
-  text: '#0F1928',
-  heading: '#BD93D8',
-  background: '#363537',
+  color: {
+    text: 'rgba(0,0,0,0.87)',
+    primary: '#BD93D8',
+    secondary: '#B47AEA',
+  },
+  body: {
+    primary: '#fafafa',
+    secondary: '#fff',
+  },
 }
 export const darkTheme = {
-  body: '#0F1928',
-  text: '#FDFDFC',
-  heading: '#B47AEA',
-  background: '#999',
+  color: {
+    text: '#fff',
+    primary: '#B47AEA',
+    secondary: '#BD93D8',
+  },
+  body: {
+    primary: '#303030',
+    secondary: '#424242',
+  },
 }

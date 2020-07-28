@@ -41,10 +41,10 @@ const Brand = styled(Link)`
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: 0.08em;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.color.text};
   text-decoration: none;
   &:hover {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.color.text};
     text-decoration: none;
   }
 `
@@ -56,8 +56,8 @@ const NavBox = styled.div`
 `
 
 const NavLink = styled(Link)`
-  box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.heading};
-  color: ${({ theme }) => theme.text};
+  box-shadow: inset 0 -0.4em 0 ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.text};
   font-size: 0.85em;
   line-height: 1em;
   margin-right: 0.4em;
@@ -68,7 +68,7 @@ const NavLink = styled(Link)`
   text-transform: uppercase;
   &:hover {
     color: inherit;
-    box-shadow: inset 0 -1.25em 0 ${({ theme }) => theme.heading};
+    box-shadow: inset 0 -1.25em 0 ${({ theme }) => theme.color.primary};
     text-decoration: none;
   }
 `
