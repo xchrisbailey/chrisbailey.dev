@@ -50,13 +50,13 @@ li {
   margin-bottom: 0.67em;
 }
 
+ul.contains-task-list {
+  list-style: none;
+}
+
 code, pre, kbd {
   font-size: .9em;
   font-family: "Fira Code", monospace;
-}
-
-pre {
-  padding: 0.67em;
 }
 
 code {

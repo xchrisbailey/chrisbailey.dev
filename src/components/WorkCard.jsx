@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
 
 const WorkCard = ({ date, description, title, tech, shot, repo, live }) => {
   return (
@@ -27,29 +26,30 @@ const WorkCard = ({ date, description, title, tech, shot, repo, live }) => {
         </p>
       </ContentBox>
       <LinkBox>
-        <Link to={repo}>github</Link>
-        <Link to={live}>live site</Link>
+        <a href={repo}>github</a>
+        <a href={live}>live site</a>
       </LinkBox>
     </CardContainer>
   )
 }
 
 const CardContainer = styled.article`
-  width: 100%;
-  background: ${({ theme }) => theme.background};
+  width: 50%;
+  background: ${({ theme }) => theme.body.secondary};
   padding: 0;
   margin: 0;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 `
 
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  background: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.color.primary};
   padding: 10px 5px;
-  margin: 4px 4px 0 4px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   h1 {
@@ -59,9 +59,8 @@ const Title = styled.div`
 `
 
 const ImageBox = styled.div`
-  margin: 0 4px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  /* border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; */
   overflow: hidden;
 `
 
@@ -69,15 +68,16 @@ const ContentBox = styled.div`
   padding: 4px;
   margin: 0px;
   p {
-    color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.color.text};
     font-size: 0.8em;
     margin-bottom: 0.3em;
     span.desc {
-      color: ${({ theme }) => theme.background};
-      background: ${({ theme }) => theme.body};
+      color: ${({ theme }) => theme.color.primary};
       font-weight: bold;
+      font-style: italic;
       padding: 2px;
       border-radius: 5px;
+      margin-right: 0.4em;
     }
   }
 `
@@ -85,12 +85,21 @@ const ContentBox = styled.div`
 const LinkBox = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 4px;
-  border-radius: 5px;
-  padding: 4px;
-  background-color: ${({ theme }) => theme.body};
+  background-color: ${({ theme }) => theme.color.primary};
   a {
+    background-color: ${({ theme }) => theme.color.secondary};
+    color: ${({ theme }) => theme.color.text};
+    /* border-radius: 5px; */
+    padding: 4px;
     font-size: 0.8em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: ${({ theme }) => theme.color.text};
+      background-color: ${({ theme }) => theme.color.primary};
+    }
   }
 `
 
