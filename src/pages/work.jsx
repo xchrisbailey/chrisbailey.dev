@@ -1,10 +1,13 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import WorkCard from '../components/WorkCard'
 
 const work = ({ data }) => {
+  const works = data.allMdx.edges
   return (
     <Layout>
       <SEO title="work" />
@@ -15,6 +18,9 @@ const work = ({ data }) => {
       </p>
 
       <p>coming...</p>
+      {works.map(w => (
+        <WorkCard {...w.node.frontmatter} />
+      ))}
     </Layout>
   )
 }
@@ -35,7 +41,7 @@ export const pageQuery = graphql`
             live
             image {
               childImageSharp {
-                fluid {
+                fluid(fit: COVER) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
