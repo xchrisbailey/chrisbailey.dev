@@ -1,36 +1,64 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { Github } from '@styled-icons/evaicons-solid/Github'
+import { Browser } from '@styled-icons/evaicons-solid/Browser'
+
+import Label from './Label'
 
 const WorkCard = ({ date, description, title, tech, image, repo, live }) => {
   return (
-    <CardContainer>
+    <Box>
       <ImageBox>
-        <Img fluid={image.childImageSharp.fluid} />
+        <Img fluid={image.childImageSharp.fluid} alt={`${title} screen shot`} />
       </ImageBox>
       <ContentBox>
-        {title}
-        <span className="desc">created</span> {date}
-        <span className="desc">info</span> {description}
-        <span className="desc">tech used</span>{' '}
-        {tech.map(t => (
-          <span key={t}>{t}, </span>
-        ))}
-        {repo ? <a href={repo}>github</a> : null}
-        {live ? <a href={live}>live site</a> : null}
+        <SiteInfo>
+          <h1 className="title">{title}</h1>
+          <p>
+            This project was created on or around{' '}
+            <span className="date">{date}</span> using{' '}
+            {tech.map(t => (
+              <Label key={`${t}${Math.random * 100}`}>{t} </Label>
+            ))}
+            and is a {description}
+          </p>
+        </SiteInfo>
+        <Links>
+          {repo ? (
+            <a
+              href={repo}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="github link"
+            >
+              <Github size="1em" />
+            </a>
+          ) : null}
+
+          {live ? (
+            <a
+              href={live}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="live site link"
+            >
+              <Browser size="1em" />
+            </a>
+          ) : null}
+        </Links>
       </ContentBox>
-    </CardContainer>
+    </Box>
   )
 }
 
-const CardContainer = styled.article`
+const Box = styled.article`
+  background: ${({ theme }) => theme.body.secondary};
   display: flex;
-  justify-content: space-between;
   width: 100%;
   height: 250px;
-  background: ${({ theme }) => theme.body.secondary};
-  padding: 0;
   margin: 0;
+  padding: 0;
   border-radius: 5px;
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
@@ -39,31 +67,52 @@ const CardContainer = styled.article`
 `
 
 const ImageBox = styled.div`
-  padding: 0;
-  margin: 0;
-  border-top-left-radius: 5px;
-  width: 250px;
-  /* border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px; */
-  overflow: hidden;
+  min-width: 250px;
+  min-height: 100%;
+  flex-grow: 5;
 `
 
 const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 4px;
-  margin: 0px;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  max-height: 100%;
+  padding: 0.5em;
+`
+
+const Links = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  a {
+    font-size: 1.25em;
+  }
+`
+
+const SiteInfo = styled.div`
+  .title {
+    align-self: center;
+    border: 0;
+    box-shadow: none;
+    font-size: 1.3em;
+    color: ${({ theme }) => theme.color.primary};
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: 5px solid ${({ theme }) => theme.body.primary};
+  }
   p {
-    color: ${({ theme }) => theme.color.text};
-    font-size: 0.8em;
-    margin-bottom: 0.3em;
-    span.desc {
-      color: ${({ theme }) => theme.color.primary};
-      font-weight: bold;
-      font-style: italic;
-      padding: 2px;
-      border-radius: 5px;
-      margin-right: 0.4em;
+    font-size: 0.9em;
+    padding-top: 0.5em;
+    .date {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9em;
+      color: ${({ theme }) => theme.color.orange};
+      text-decoration-line: underline;
+      text-decoration-style: double;
     }
   }
 `

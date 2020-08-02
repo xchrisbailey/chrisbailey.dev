@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
+import reset from 'styled-reset'
 
 const GlobalStyles = createGlobalStyle`
+${reset}
 body {
   background: ${({ theme }) => theme.body.primary};
   color: ${({ theme }) => theme.color.text};
@@ -44,10 +46,12 @@ p, ul, ol, blockquote, pre {
 
 ul, ol {
   margin-left: 1.7em;
+  list-style-type: disc;
 }
 
 li {
-  margin-bottom: 0.67em;
+  margin-bottom: 0.75em;
+  line-height: 1.7em;
 }
 
 ul.contains-task-list {

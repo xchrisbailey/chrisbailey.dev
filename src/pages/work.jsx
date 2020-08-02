@@ -17,9 +17,8 @@ const work = ({ data }) => {
         little info about the project itself.
       </p>
 
-      <p>coming...</p>
       {works.map(w => (
-        <WorkCard {...w.node.frontmatter} />
+        <WorkCard key={w.node.id} {...w.node.frontmatter} />
       ))}
     </Layout>
   )
@@ -34,14 +33,14 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM YYYY")
             description
             tech
             repo
             live
             image {
               childImageSharp {
-                fluid(fit: COVER) {
+                fluid(maxHeight: 250, maxWidth: 250, cropFocus: CENTER) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
