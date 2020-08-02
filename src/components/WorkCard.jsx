@@ -26,8 +26,8 @@ const WorkCard = ({ date, description, title, tech, shot, repo, live }) => {
         </p>
       </ContentBox>
       <LinkBox>
-        <a href={repo}>github</a>
-        <a href={live}>live site</a>
+        {repo ? <a href={repo}>github</a> : null}
+        {live ? <a href={live}>live site</a> : null}
       </LinkBox>
     </CardContainer>
   )
