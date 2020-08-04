@@ -86,6 +86,14 @@ module.exports = {
         icon: `src/images/rocket-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-loadable-components-ssr`,
+      options: {
+        // Whether replaceHydrateFunction should call ReactDOM.hydrate or ReactDOM.render
+        // Defaults to ReactDOM.render on develop and ReactDOM.hydrate on build
+        useHydrate: true,
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

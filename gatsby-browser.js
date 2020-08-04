@@ -1,7 +1,9 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+const loadableReady = require('@loadable/component').loadableReady
 
-// You can delete this file if you're not using it
+exports.replaceHydrateFunction = () => {
+  return (element, container, callback) => {
+    loadableReady(() => {
+      ReactDOM.render(element, container, callback)
+    })
+  }
+}
