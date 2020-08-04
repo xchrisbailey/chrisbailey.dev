@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Github } from '@styled-icons/evaicons-solid/Github'
 import { Browser } from '@styled-icons/evaicons-solid/Browser'
+import media from 'styled-media-query'
 
 import Label from './Label'
 
@@ -19,7 +20,9 @@ const WorkCard = ({ date, description, title, tech, image, repo, live }) => {
             This project was created on or around{' '}
             <span className="date">{date}</span> using{' '}
             {tech.map(t => (
-              <Label key={`${t}${Math.random * 100}`}>{t} </Label>
+              <Label random key={`${t}${Math.random * 100}`}>
+                {t}
+              </Label>
             ))}
             and is a {description}
           </p>
@@ -67,6 +70,7 @@ const Box = styled.article`
 `
 
 const ImageBox = styled.div`
+  ${media.lessThan('medium')`display: none;`}
   min-width: 250px;
   min-height: 100%;
   flex-grow: 5;
