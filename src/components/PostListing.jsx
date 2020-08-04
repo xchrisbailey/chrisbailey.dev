@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import media from 'styled-media-query'
+import { BookOpenOutline } from '@styled-icons/evaicons-outline/BookOpenOutline'
+import { CalendarOutline } from '@styled-icons/evaicons-outline/CalendarOutline'
 
 const PostListing = ({ post }) => {
   return (
@@ -11,16 +13,12 @@ const PostListing = ({ post }) => {
       </Title>
       <InfoBar>
         <p>
-          <span role="img" aria-label="calendar">
-            🗓
-          </span>{' '}
+          <CalIcon size={18} />
           {post.frontmatter.date}
         </p>
         <p> • </p>
         <p>
-          <span role="img" aria-label="coffee">
-            ☕️
-          </span>{' '}
+          <BookIcon size={18} />
           {post.timeToRead}
           {post.timeToRead > 1 ? ' minutes' : ' minute'} to read
         </p>
@@ -67,7 +65,22 @@ const InfoBar = styled.div`
     font-size: 16px;
     margin: 0;
     padding: 4px;
+    display: inline-flex;
+    align-self: center;
   }
+`
+const CalIcon = styled(CalendarOutline)`
+  margin-right: 0.3em;
+  height: 1em;
+  color: ${({ theme }) => theme.color.secondary};
+  align-self: center;
+`
+
+const BookIcon = styled(BookOpenOutline)`
+  align-self: center;
+  margin-right: 0.3em;
+  height: 1em;
+  color: ${({ theme }) => theme.color.secondary};
 `
 
 export default PostListing
