@@ -1,7 +1,8 @@
-const PostTemplate = require.resolve(`./src/templates/post.jsx`)
+const path = require('path')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+  const PostTemplate = path.resolve(`./src/templates/post.jsx`)
 
   const result = await graphql(`
     {
@@ -19,8 +20,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Create Posts and Post pages.
-  const { allMdx } = result.data
-  const posts = allMdx.nodes
+  // const { allMdx } = result.data
+  const posts = result.data.allMdx.nodes
 
   // Create a page for each Post
   posts.forEach((post, index) => {
