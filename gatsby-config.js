@@ -9,6 +9,16 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-next-seo`,
+      options: {
+        twitter: {
+          handle: '@chrisbailey',
+          site: '@chrisbailey',
+          cardType: 'summary',
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`noto sans`, `bree serif`, `fira code`],

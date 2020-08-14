@@ -1,16 +1,16 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbySeo } from 'gatsby-plugin-next-seo'
 
 import Layout from '../components/Layout'
-import SEO from '../components/seo'
 import WorkCard from '../components/WorkCard'
 
 const work = ({ data }) => {
   const works = data.allMdx.edges
   return (
     <Layout>
-      <SEO title="work" />
+      <GatsbySeo title="work" />
       <h1>Things I&apos;ve Created</h1>
       <p>
         listing of the things I&apos;ve created, the stack they use/d and a
@@ -24,7 +24,7 @@ const work = ({ data }) => {
   )
 }
 
-export const pageQuery = graphql`
+export const query = graphql`
   query {
     allMdx(
       filter: { frontmatter: {}, fileAbsolutePath: { regex: "/.*works.*/" } }

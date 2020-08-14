@@ -1,15 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbySeo } from 'gatsby-plugin-next-seo'
 
 import Layout from '../components/Layout'
 import PostListing from '../components/PostListing'
-import SEO from '../components/seo'
 
 const index = ({ data }) => {
   const posts = data.allMdx.edges
   return (
     <Layout>
-      <SEO title="launchpad" />
+      <GatsbySeo title="data.site.siteMetadata.title" />
       {posts.map(post => (
         <PostListing key={post.node.id} post={post.node} />
       ))}
@@ -17,7 +17,7 @@ const index = ({ data }) => {
   )
 }
 
-export const pageQuery = graphql`
+export const query = graphql`
   query {
     site {
       siteMetadata {
