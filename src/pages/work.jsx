@@ -10,7 +10,7 @@ const work = ({ data }) => {
   const works = data.allMdx.edges
   return (
     <Layout>
-      <GatsbySeo title="work" />
+      <GatsbySeo title="work" language="en" />
       <h1>Things I&apos;ve Created</h1>
       <p>
         listing of the things I&apos;ve created, the stack they use/d and a

@@ -12,6 +12,7 @@ const index = ({ data }) => {
       <GatsbySeo
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
+        language="en"
       />
       {posts.map(post => (
         <PostListing key={post.node.id} post={post.node} />

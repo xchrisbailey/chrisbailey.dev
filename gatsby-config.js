@@ -4,6 +4,7 @@ module.exports = {
     description: `Personal developer blog, follow along with my learning journey`,
     author: `@chrisbailey`,
     siteUrl: 'https://chrisbailey.dev',
+    lang: 'en',
   },
   plugins: [
     `gatsby-plugin-robots-txt`,

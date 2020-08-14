@@ -6,10 +6,14 @@ import { GatsbySeo } from 'gatsby-plugin-next-seo'
 
 import Layout from '../components/Layout'
 
-const Post = ({ data: { mdx } }) => {
+const Post = ({ data: { mdx }, data }) => {
   return (
     <Layout>
-      <GatsbySeo title={mdx.frontmatter.title} description={mdx.excerpt} />
+      <GatsbySeo
+        title={mdx.frontmatter.title}
+        description={mdx.excerpt}
+        language="en"
+      />
       <article>
         <Title>{mdx.frontmatter.title}</Title>
         <MDXRenderer>{mdx.body}</MDXRenderer>
