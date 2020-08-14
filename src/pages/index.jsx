@@ -9,7 +9,10 @@ const index = ({ data }) => {
   const posts = data.allMdx.edges
   return (
     <Layout>
-      <GatsbySeo title="data.site.siteMetadata.title" />
+      <GatsbySeo
+        title={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+      />
       {posts.map(post => (
         <PostListing key={post.node.id} post={post.node} />
       ))}
@@ -22,6 +25,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMdx(
