@@ -17,8 +17,7 @@ const WorkCard = ({ date, description, title, tech, image, repo, live }) => {
         <SiteInfo>
           <h1 className="title">{title}</h1>
           <p>
-            This project was created on or around{' '}
-            <span className="date">{date}</span> using{' '}
+            This project was created <span className="date">{date}</span> using{' '}
             {tech.map(t => (
               <Label random key={`${t}${Math.random * 100}`}>
                 {t}
@@ -60,7 +59,7 @@ const Box = styled.article`
   display: flex;
   width: 100%;
   height: 250px;
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
   border-radius: 5px;
   overflow: hidden;
