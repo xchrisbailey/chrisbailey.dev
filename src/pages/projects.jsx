@@ -4,21 +4,21 @@ import { graphql } from 'gatsby'
 import { GatsbySeo } from 'gatsby-plugin-next-seo'
 
 import Layout from '../components/Layout'
-import WorkCard from '../components/WorkCard'
+import ProjectCard from '../components/ProjectCard'
 
-const work = ({ data }) => {
-  const works = data.allMdx.edges
+const project = ({ data }) => {
+  const projects = data.allMdx.edges
   return (
     <Layout>
-      <GatsbySeo title="work" language="en" />
+      <GatsbySeo title="projects" language="en" />
       <h1>Things I&apos;ve Created</h1>
       <p>
         listing of the things I&apos;ve created, the stack they use/d and a
         little info about the project itself.
       </p>
 
-      {works.map(w => (
-        <WorkCard key={w.node.id} {...w.node.frontmatter} />
+      {projects.map(w => (
+        <ProjectCard key={w.node.id} {...w.node.frontmatter} />
       ))}
     </Layout>
   )
@@ -27,7 +27,7 @@ const work = ({ data }) => {
 export const query = graphql`
   query {
     allMdx(
-      filter: { frontmatter: {}, fileAbsolutePath: { regex: "/.*works.*/" } }
+      filter: { frontmatter: {}, fileAbsolutePath: { regex: "/.*projects.*/" } }
     ) {
       edges {
         node {
@@ -53,4 +53,4 @@ export const query = graphql`
   }
 `
 
-export default work
+export default project

@@ -7,7 +7,7 @@ import media from 'styled-media-query'
 
 import Label from './Label'
 
-const WorkCard = ({ date, description, title, tech, image, repo, live }) => {
+const ProjectCard = ({ date, description, title, tech, image, repo, live }) => {
   return (
     <Box>
       <ImageBox>
@@ -120,4 +120,4 @@ const SiteInfo = styled.div`
   }
 `
 
-export default WorkCard
+export default ProjectCard
