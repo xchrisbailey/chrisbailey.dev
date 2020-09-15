@@ -8,14 +8,14 @@ const colors = {
 
 export const lightTheme = {
   color: {
-    text: 'rgba(0,0,0,0.87)',
+    text: '#121212',
     primary: '#BD93D8',
     secondary: '#B47AEA',
     ...colors,
   },
   body: {
-    primary: '#fafafa',
-    secondary: '#fff',
+    primary: '#fff',
+    secondary: '#fafafa',
   },
 }
 export const darkTheme = {
