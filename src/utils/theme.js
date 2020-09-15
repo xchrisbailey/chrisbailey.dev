@@ -26,7 +26,7 @@ export const darkTheme = {
     ...colors,
   },
   body: {
-    primary: '#303030',
-    secondary: '#424242',
+    primary: '#121212',
+    secondary: '#000',
   },
 }
