@@ -2,7 +2,7 @@
 slug: 'android-java-navigation'
 title: 'Android Java Navigation'
 date: '2020-10-19T15:22:55.252Z'
-published: false
+published: true
 excerpt: 'basic navigation and data passing in android java'
 author: 'Chris Bailey'
 tags:
