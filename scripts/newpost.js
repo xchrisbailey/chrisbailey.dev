@@ -56,7 +56,7 @@ const success = chalk.bold.green.inverse
         `Post ${title} was created successfully, opening with Typora now..`
       )
     )
-    exec(`open -a typora ${blogPostFolder}/${slug}.md`).unref()
+    exec(`code ${blogPostFolder}/${slug}.md`).unref()
   } else {
     log(error("Please don't provide any arguments to the generator"))
   }
