@@ -7,7 +7,12 @@ module.exports = {
     lang: 'en',
   },
   plugins: [
-    `gatsby-plugin-robots-txt`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', disallow: ['/'] }],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-next-seo`,
@@ -97,9 +102,5 @@ module.exports = {
         icon: `src/images/rocket-icon.png`, // This path is relative to the root of the site.
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
